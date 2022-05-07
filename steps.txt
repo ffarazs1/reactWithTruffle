@@ -56,3 +56,13 @@ To build the application for production, use the build script. A production buil
 
 4)  we have to write contract in contract folder and migrations in migrations and test in test folder
 5) test can be written both in JavaScript and Solidity
+
+#############
+To Update
+#############
+1) change contract
+2) change migration
+3) change tests
+4) design react application
+5) connect react with smart contract
+6) test and done
