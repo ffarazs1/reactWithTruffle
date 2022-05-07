@@ -1,0 +1,58 @@
+Installation
+
+First ensure you are in a new and empty directory.
+
+    Run the unbox command via npx and skip to step 3. This will install all necessary dependencies. A Create-React-App is generated in the client directory.
+
+# 1) npx truffle unbox react
+
+Alternatively, you can install Truffle globally and run the unbox command.
+
+# 2) npm install -g truffle
+# 3) truffle unbox react
+
+Run the development console.
+
+# 4) truffle develop
+
+Compile and migrate the smart contracts. Note inside the development console we don't preface commands with truffle.
+
+# 5) compile
+# 6) migrate
+
+In the client directory, we run the React app. Smart contract changes must be manually recompiled and migrated.
+
+// in another terminal (i.e. not in the truffle develop prompt)
+# 7) cd client
+# 8) npm run start
+
+Truffle can run tests written in Solidity or JavaScript against your smart contracts. Note the command varies slightly if you're in or outside of the development console.
+
+// inside the development console.
+# 9) test
+
+// outside the development console..
+# 10) truffle test
+
+Jest is included for testing React components. Compile your contracts before running Jest, or you may receive some file not found errors.
+
+// ensure you are inside the client directory when running this
+# 11) npm run test
+
+To build the application for production, use the build script. A production build will be in the client/build folder.
+
+// ensure you are inside the client directory when running this
+# 12) npm run build
+
+
+
+##################
+ IMPORTANT POINTS
+##################
+
+1) client folder has react code
+2) We can write test for client side in App.test.JavaScript
+3) client interact with contracts json in client/contracts folder whose location is set in truffle-config.js
+
+4)  we have to write contract in contract folder and migrations in migrations and test in test folder
+5) test can be written both in JavaScript and Solidity
